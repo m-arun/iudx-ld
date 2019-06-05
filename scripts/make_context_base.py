@@ -1,7 +1,7 @@
 import json
 
-fl = "../base_schemas/iudx_base.json"
-iudx_base_iri = "http://uri.iudx.org/json-ld"
+fl = "base_schemas/iudx_base.json"
+iudx_base_iri = "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld"
 
 doc = {}
 
@@ -16,5 +16,5 @@ for prop in props:
     context[prop] = iudx_base_iri + "/" + prop
 
 doc["@context"] = context
-with open(fl+".jsonld", "w") as f:
+with open(fl[:-4]+"jsonld", "w") as f:
     json.dump(doc, f, indent=4, sort_keys=True)

@@ -1,16 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "@context": {
-        "entityIdSchema": "http://uri.iudx.org/json-ld/entityIdSchema",
-        "itemStatusSchema": "http://uri.iudx.org/json-ld/itemStatusSchema",
-        "itemTypeSchema": "http://uri.iudx.org/json-ld/itemTypeSchema",
-        "refToAnotherItemSchema": "http://uri.iudx.org/json-ld/refToAnotherItemSchema",
-        "refToDataModelItemSchema": "http://uri.iudx.org/json-ld/refToDataModelItemSchema",
-        "refToProviderItemSchema": "http://uri.iudx.org/json-ld/refToProviderItemSchema",
-        "refToResourceServerItemSchema": "http://uri.iudx.org/json-ld/refToResourceServerItemSchema",
-        "resourceDataSchema": "http://uri.iudx.org/json-ld/resourceDataSchema",
-        "sharingTypeSchema": "http://uri.iudx.org/json-ld/sharingTypeSchema",
-        "tagsSchema": "http://uri.iudx.org/json-ld/tagsSchema"
+        "entityIdSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/entityIdSchema",
+        "itemStatusSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/itemStatusSchema",
+        "itemTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/itemTypeSchema",
+        "refToAnotherItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToAnotherItemSchema",
+        "refToDataModelItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToDataModelItemSchema",
+        "refToProviderItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToProviderItemSchema",
+        "refToResourceServerItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToResourceServerItemSchema",
+        "resourceDataSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/resourceDataSchema",
+        "sharingTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/sharingTypeSchema",
+        "tagsSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/tagsSchema"
     },
     "allOf": [
         {
