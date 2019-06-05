@@ -1,0 +1,219 @@
+{
+	"@context": {
+		"id": "@id"
+	},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"describes": "Schema of catalog entries with associated data resources.",
+	"type": "object",
+	"allOf": [{
+		"$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_item_schema.json#"
+	}],
+	"properties": {
+		"tagsSchema": {
+			"type": "array",
+			"minItems": 0,
+			"uniqueItems": true,
+			"describes": "Any strings which annotate this resource. It intends to provide discovery hints.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"itemTypeSchema": {
+			"type": "string",
+			"enum": ["data-model", "provider", "resource-server", "resource-item", "tags-item", "access-object", "base-schema", "catalogue-item"],
+			"describes": "Type of an item. Schema or an information document."
+		},
+		"itemStatusSchema": {
+			"type": "string",
+			"enum": ["active", "deprecated"],
+			"describes": "Status of an item. In production version of catalogue, for purposes of provenance, one can choose to not delete an item but set its status to 'deprecated'. All the older versions of an updated item may be persisted by setting their status as 'deprecated'. Only the current item containing latest updates should have status set to 'active'."
+		},
+		"refToAnotherItemSchema": {
+			"type": "object",
+			"describes": "Attributes describing the link to another item",
+			"properties": {
+				"describes": {
+					"type": "string",
+					"describes": "Describes the contents of item to which link is being provided"
+				},
+				"refItemId": {
+					"type": "string",
+					"describes": "Contains 'id' of the item being referred to. 'id' is of type UUID"
+				},
+				"refItemURL": {
+					"type": "string",
+					"format": "uri",
+					"describes": "Contains URL link for the item being referred to."
+				}
+			}
+		},
+		"refToProviderItemSchema": {
+			"type": "object",
+			"allOf": [{
+				"$ref": "#/definitions/refToAnotherItemSchema"
+			}],
+			"properties": {
+				"refItemName": {
+					"type": "string",
+					"describes": "Name of the provider."
+				},
+				"refItemType": {
+					"type": "string",
+					"enum": ["provider"]
+				}
+			},
+			"required": ["refItemName", "refItemId"]
+		},
+		"refToResourceServerItemSchema": {
+			"type": "object",
+			"allOf": [{
+				"$ref": "#/definitions/refToAnotherItemSchema"
+			}],
+			"properties": {
+				"refItemName": {
+					"type": "string",
+					"describes": "Name of the resource server."
+				},
+				"refItemType": {
+					"type": "string",
+					"enum": ["resource-server"]
+				}
+			},
+			"required": ["refItemId", "refItemName"]
+		},
+		"refToDataModelItemSchema": {
+			"type": "object",
+			"allOf": [{
+				"$ref": "#/definitions/refToAnotherItemSchema"
+			}],
+			"properties": {
+				"refItemName": {
+					"type": "string",
+					"describes": "Name of the data model."
+				},
+				"refItemType": {
+					"type": "string",
+					"enum": ["data-model"]
+				}
+			},
+			"required": ["refItemId", "refItemName"]
+		},
+		"sharingTypeSchema": {
+			"type": "string",
+			"enum": ["public", "private", "protected", "confidential"]
+		},
+		"entityIdSchema": {
+			"type": "object",
+			"properties": {
+				"entityId": {
+					"type": "string",
+					"describes": "ID of the Entity. Should be unique within this IUDX exchange."
+				},
+				"entityIdentityType": {
+					"type": "string",
+					"describes": "Format of Identification token for the entity. For example: X509, OpenIDConnect etc."
+				},
+				"entityIdentityProviderURL": {
+					"type": "string",
+					"format": "uri",
+					"describes": "Describes the link to the identity provide for this entity"
+				},
+				"entityContactEmail": {
+					"type": "string",
+					"format": "email",
+					"describes": "Email contact address for this entity"
+				},
+				"entityURL": {
+					"type": "string",
+					"format": "uri",
+					"describes": "Web page for this entity"
+				},
+				"entityContactPhone": {
+					"type": "string",
+					"describes": "Contact Phone number for this entity"
+				}
+			},
+			"required": ["entityId", "entityIdentityType", "entityIdentityProviderURL"]
+		},
+		"resourceDataSchema": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": ["string", "array"]
+				},
+				"properties": {
+					"type": "object",
+					"patternProperties": {
+						"[a-zA-Z0-9]+$": {
+							"type": "object"
+						}
+					}
+				},
+				"units": {
+					"type": "string",
+					"describes": "units for the measured quantity if applicable"
+				},
+				"description": {
+					"type": "string"
+				}
+			},
+			"resourceServer": {
+				"$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_base_def.json#/definitions/refToResourceServerItemSchema"
+			},
+			"resourceId": {
+				"type": "string",
+				"describes": "Id of the resource on the resource-server. It should be unique on the resource-server."
+			},
+			"resourceGroup": {
+				"type": "string",
+				"describes": "Identifier/Name for the resource group (category/class) to which this resource belongs. This resource group category/class is defined by the resource server. All resource-items belonging to a resourceGroup should have same data model and should serve same data using same access objects."
+			},
+			"accessInformation": {
+				"type": "array",
+				"describes": "List of access mechanisms available for data associated with this catalog item",
+				"items": {
+					"type": "object",
+					"properties": {
+						"resourceType": {
+							"type": "string",
+							"enum": ["table", "file", "message", "messageStream", "gis", "media", "service", "other"],
+							"describes": "Type of data resource"
+						},
+						"accessObjectType": {
+							"type": "string",
+							"describes": "Type of access mechanism. For example, 'openAPI', 'asyncAPI', 'custom'. Can be changed to ENUM later."
+						},
+						"accessObjectURL": {
+							"type": "string",
+							"format": "uri",
+							"describes": "URL that has more information about meta-data of this resource"
+						},
+						"accessObject": {
+							"oneOf": [{
+									"title": "Link to API/JSON-schema object",
+									"type": "string",
+									"describes": "Link to an object (api JSON object, or a json-schema) to describe access mechanism for this data resource."
+								},
+								{
+									"title": "Embedded API/JSON-schema object",
+									"type": "object",
+									"describes": "An object (api JSON object, or a json-schema) to describe access mechanism for this data resource. For example, an OpenAPI JSON object can be used to describe APIs for interacting with this resource. "
+								}
+							]
+						},
+						"accessVariables": {
+							"describes": "Object describing some of the instance specific variables used in API objects or objects specified by access schema for this resource",
+							"type": "object",
+							"patternProperties": {
+								"[a-zA-Z0-9]+$": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"required": ["accessObjectType", "accessObject"]
+				}
+			}
+		}
+	}
+}

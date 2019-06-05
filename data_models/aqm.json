@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "uo": "http://units.open.org/",
+        "NO2": {
+            "@id": "http://uri.iudx.org/json-ld/NO2",
+            "@type": "xsd:float",
+            "units": "uo:ppm"
+        },
+        "STATUS": {
+            "@id": "http://uri.iudx.org/json-ld/STATUS",
+            "@type": "xsd:float",
+            "units": "uo:ppm"
+        }
+
+    }
+}
