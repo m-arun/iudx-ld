@@ -13,7 +13,7 @@ props = doc["properties"]
 context = {}
 
 for prop in props:
-    context[prop] = iudx_base_iri + "/" + prop
+    context[prop] = iudx_base_iri + "#/properties/" + prop
 
 doc["@context"] = context
 with open(fl[:-4]+"jsonld", "w") as f:

@@ -1,16 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "@context": {
-        "entityIdSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/entityIdSchema",
-        "itemStatusSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/itemStatusSchema",
-        "itemTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/itemTypeSchema",
-        "refToAnotherItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToAnotherItemSchema",
-        "refToDataModelItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToDataModelItemSchema",
-        "refToProviderItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToProviderItemSchema",
-        "refToResourceServerItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/refToResourceServerItemSchema",
-        "resourceDataSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/resourceDataSchema",
-        "sharingTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/sharingTypeSchema",
-        "tagsSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld/tagsSchema"
+        "entityIdSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/entityIdSchema",
+        "itemStatusSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/itemStatusSchema",
+        "itemTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/itemTypeSchema",
+        "refToAnotherItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/refToAnotherItemSchema",
+        "refToDataModelItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/refToDataModelItemSchema",
+        "refToProviderItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/refToProviderItemSchema",
+        "refToResourceServerItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/refToResourceServerItemSchema",
+        "resourceDataSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/resourceDataSchema",
+        "sharingTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/sharingTypeSchema",
+        "tagsSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/tagsSchema"
     },
     "allOf": [
         {
