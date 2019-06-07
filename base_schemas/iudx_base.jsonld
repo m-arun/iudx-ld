@@ -1,7 +1,10 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "@context": {
-        "entityIdSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/entityIdSchema",
+        "entityIdSchema": {
+        "@id": "http://iudx.org.in/entityIdSchema",
+        "@type":"https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/entityIdSchema"
+        },
         "itemStatusSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/itemStatusSchema",
         "itemTypeSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/itemTypeSchema",
         "refToAnotherItemSchema": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_base.jsonld#/properties/refToAnotherItemSchema",
