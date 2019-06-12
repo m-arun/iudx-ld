@@ -4,7 +4,7 @@
     ],
     "id": "test:testResource",
     "itemDescription": "Test Resource Description",
-    "refDataModel": "testDatamodel.json",
+    "refDataModel": "http://example.com/testDatamodel.json",
     "provider": {
         "type": "Relationship",
         "object": "test:relation:ship"
@@ -17,5 +17,6 @@
         }
     },
     "itemStatus": "active",
-    "createdAt": "Wed Mar 27 13:39:57 UTC 2019"
+    "createdAt": "2018-11-13T20:20:39+00:00"
 }
+
