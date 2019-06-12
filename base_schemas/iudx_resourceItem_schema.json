@@ -18,7 +18,7 @@
         "refDataModel": {
             "type": "string",
             "format": "uri",
-            "describes": "Reference to the data model for this catalog item. It is assumed that the referred to data-model(schema) has already been uploaded into the catalog OR stored in a pre-defined repository. The catalogue item comprises of fields from the refDataModel along with the refBaseSchema."
+            "describes": "Reference to the data model for this resource item. It is assumed that the referred to data-model(schema) has already been uploaded into the catalog OR stored in a pre-defined repository. The catalogue item comprises of fields from the refDataModel along with the refBaseSchema."
         },
         "provider": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
