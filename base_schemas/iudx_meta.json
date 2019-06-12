@@ -145,11 +145,6 @@
         "value"
       ]
     }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/Entity"
-    }
-  ]
+  }
 }
 
