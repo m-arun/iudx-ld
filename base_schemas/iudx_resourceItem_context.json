@@ -3,7 +3,6 @@
     "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json",
     "title": "IUDX-LD ResourceItem",
     "description": "IUDX-LD ResourceItem",
-    "type": "object",
     "properties": {
         "@context": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/LdContext"

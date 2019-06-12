@@ -1,11 +1,15 @@
 from jsonschema import validate
 import json
 
-schemaFile = "../base_schemas/iudx_resourceItem_context.json"
-itemFile = "../ex_items/testItem.json"
+schemaFile = "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json"
+itemFile = "ex_items/testItem.json"
 
 
-schema = json.loads(schemaFile)
-itemFile = json.loads(itemFile)
+with open(itemFile, "r") as f:
+    item = json.load(f)
 
-resolver = jsonschema.RefResolver('file://' +  , None)
+try:
+    validate(item, schemaFile)
+except Exception as e:
+    print(e)
+
