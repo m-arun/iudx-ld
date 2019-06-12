@@ -32,8 +32,8 @@
         "createdAt" : {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
         },
-        "updatedAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/updatedAt"
+        "modifiedAt" : {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/modifiedAt"
         },
         "deprecatedAt" : {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/deprecatedAt"
