@@ -1,0 +1,164 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "https://raw.githubusercontent.org/rraks/iudx-ld/base_schemas/common.json",
+    "title": "IUDX-LD Common Definitions",
+    "description": "IUDX-LD Common",
+    "definitions": {
+        "id": {
+            "type": "string",
+            "format": "uri",
+            "description": "id for rdfs:Resource objects"
+        },
+        "Name": {
+            "type": "string",
+            "pattern": "^(\\d|[a-zA-Z]|_)+$",
+            "minLength": 1,
+            "description": "NGSI-LD Name"
+        },
+        "observedAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modifiedAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "deprecatedAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "tagsSchema": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems":true,
+            "describes": "Any strings which annotate this resource. It intends to provide discovery hints.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "itemStatusSchema": {
+            "type": "string",
+            "enum": ["active", "deprecated"],
+            "describes": "Status of an item. In production version of catalogue, for purposes of provenance, one can choose to not delete an item but set its status to 'deprecated'. All the older versions of an updated item may be persisted by setting their status as 'deprecated'. Only the current item containing latest updates should have status set to 'active'."
+        },
+        "units": {
+            "type": "string",
+            "describes": "units for the measured quantity if applicable"
+        },
+        "range": {
+            "type": "object",
+            "properties": {
+                "minimum": {
+                    "type": "number"
+                },
+                "maximum": {
+                    "type": "number"
+                }
+            },
+            "describes": "units for the measured quantity if applicable"
+        },
+        "LdContext": {
+            "anyOf": [
+                {
+                    "type": "object"
+                },
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "Endpoint": {
+            "type": "object",
+            "required": [
+                "uri"
+            ],
+            "properties": {
+                "uri": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "accept": {
+                    "type": "string",
+                    "enum": [
+                        "application/json",
+                        "application/ld+json"
+                    ]
+                }
+            }
+        },
+        "georel": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "equals",
+                        "disjoint",
+                        "intersects",
+                        "within",
+                        "contains",
+                        "overlaps"
+                    ]
+                },
+                {
+                    "type": "string",
+                    "pattern": "^near;((maxDistance==\\d+)|(minDistance==\\d+))$"
+                }
+            ]
+        },
+        "coordinates": {
+            "oneOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.org/rraks/iudx-ld/base_schemas/geometry-schema.json#/definitions/position"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.org/rraks/iudx-ld/base_schemas/geometry-schema.json#/definitions/positionArray"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.org/rraks/iudx-ld/base_schemas/geometry-schema.json#/definitions/lineString"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.org/rraks/iudx-ld/base_schemas/geometry-schema.json#/definitions/polygon"
+                }
+            ]
+        },
+        "geometry": {
+            "type": "string",
+            "enum": [
+                "Point",
+                "MultiPoint",
+                "LineString",
+                "MultiLineString",
+                "Polygon",
+                "MultiPolygon"
+            ]
+        },
+        "timerel": {
+            "type": "string",
+            "enum": [
+                "before",
+                "after",
+                "between"
+            ]
+        }
+    }
+}

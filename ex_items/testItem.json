@@ -1,0 +1,21 @@
+{
+    "@context": [
+        "http://schema.org/test"
+    ],
+    "id": "test:testResource",
+    "itemDescription": "Test Resource Description",
+    "refDataModel": "testDatamodel.json",
+    "provider": {
+        "type": "Relationship",
+        "object": "test:relation:ship"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [13,17]
+        }
+    },
+    "itemStatus": "active",
+    "createdAt": "Wed Mar 27 13:39:57 UTC 2019"
+}

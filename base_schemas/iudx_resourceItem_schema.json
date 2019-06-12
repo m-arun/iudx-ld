@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json",
+    "title": "IUDX-LD ResourceItem",
+    "description": "IUDX-LD ResourceItem",
+    "properties": {
+        "@context": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/LdContext"
+        },
+        "id": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/id"
+        },
+        "itemDescription": {
+            "type": "string",
+            "describes": "Text description of this item."
+        },
+        "refDataModel": {
+            "type": "string",
+            "format": "uri",
+            "describes": "Reference to the data model for this catalog item. It is assumed that the referred to data-model(schema) has already been uploaded into the catalog OR stored in a pre-defined repository. The catalogue item comprises of fields from the refDataModel along with the refBaseSchema."
+        },
+        "provider": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
+            "describes":
+        },
+        "location": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/GeoProperty"
+        },
+        "itemStatus": {
+            "$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_base_def.json#/definitions/itemStatusSchema"
+        },
+        "createdAt" : {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
+        },
+        "updatedAt" : {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/updatedAt"
+        },
+        "deprecatedAt" : {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/deprecatedAt"
+        },
+        "additionalProperties": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+                }
+            ]
+        }
+    }
+}
