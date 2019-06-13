@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_dataModel_schema.json",
+    "title": "IUDX-LD DataModel",
+    "description": "IUDX-LD DataModel",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/LdContext"
+        },
+        "name": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/Name"
+        },
+        "dataModelDescription": {
+            "type": "string",
+            "describes": "Text description of this dataModel."
+        },
+        "additionalProperties" : {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+                }
+            ]
+        }
+
+    }
+}
