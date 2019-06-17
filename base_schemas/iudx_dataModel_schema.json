@@ -6,10 +6,10 @@
     "type": "object",
     "properties": {
         "@context": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/LdContext"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/LdContext"
         },
         "name": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/Name"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/Name"
         },
         "dataModelDescription": {
             "type": "string",

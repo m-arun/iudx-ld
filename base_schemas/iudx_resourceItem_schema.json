@@ -6,40 +6,41 @@
     "type": "object",
     "properties": {
         "@context": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/LdContext"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/LdContext"
         },
         "id": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/id"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/id"
         },
         "resourceServer": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
+            "describes": "The resource server which hosts this resource item"
         },
         "itemDescription": {
-            "type": "string",
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
             "describes": "Text description of this item."
         },
         "refDataModel": {
-            "type": "string",
-            "format": "uri",
-            "describes": "Reference to the data model for this resource item. It is assumed that the referred to data-model(schema) has already been uploaded into the catalog OR stored in a pre-defined repository. The catalogue item comprises of fields from the refDataModel along with the refBaseSchema."
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
+            "describes": "Reference to the data model for this resource item."
         },
         "provider": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
+            "describes": "Link to the provider of this resource"
         },
         "location": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/GeoProperty"
         },
         "itemStatus": {
-            "$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_base_def.json#/definitions/itemStatusSchema"
+            "$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_meta.json#/definitions/Property"
         },
         "createdAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
         },
         "modifiedAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/modifiedAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
         },
         "deprecatedAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/deprecatedAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/deprecatedAt"
         },
         "additionalProperties": {
             "anyOf": [

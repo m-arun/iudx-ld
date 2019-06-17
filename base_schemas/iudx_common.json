@@ -40,7 +40,7 @@
                 "type": "string"
             }
         },
-        "itemStatusSchema": {
+        "statusSchema": {
             "type": "string",
             "enum": ["active", "deprecated"],
             "describes": "Status of an item. In production version of catalogue, for purposes of provenance, one can choose to not delete an item but set its status to 'deprecated'. All the older versions of an updated item may be persisted by setting their status as 'deprecated'. Only the current item containing latest updates should have status set to 'active'."

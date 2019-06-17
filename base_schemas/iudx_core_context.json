@@ -1,18 +1,32 @@
 {
     "@context": {
-      "iudx-ld": "http://iudx.iudx.org/iudx-ld/",    
-      "id": "@id",
-      "type": "@type",
-      "value": "http://iudx.etsi.org/iudx-ld/hasValue",
-      "object": {
-        "@id": "http://iudx.etsi.org/iudx-ld/hasObject",
-        "@type":"@id"
-      },
-      "Property": "http://iudx.etsi.org/iudx-ld/Property",
-      "Relationship": "http://iudx.etsi.org/iudx-ld/relationship",
-      "ResourceItem": "http://iudx.etsi.org/iudx-ld/ResourceItem",
-      "DataModel": "http://iudx.etsi.org/iudx-ld/DataModel",
-      "Provider": "http://iudx.etsi.org/iudx-ld/Provider",
-      "Location": "http://iudx.etsi.org/iudx-ld/Location"
+        "iudx": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/",
+        "iudx_meta": "iudx:iudx_meta.json#/definitions/",
+        "id": {
+            "@id":"iudx:iudx_common.json#/definitions/id",
+            "@type":"@id"
+        },
+        "type": "@type",
+        "value": "http:uri.iudx.org/hasValue",
+        "object": {
+            "@id": "http:uri.iudx.org/hasObject",
+            "@type":"@id"
+        },
+        "Property": {
+            "@id":"iudx_meta:Property",
+            "@type": "iudx_meta:Property"
+        },
+        "Relationship": {
+            "@id":"iudx_meta:Relationship",
+            "@type": "iudx_meta:Relationship"
+        },
+        "GeoProperty": {
+            "@id":"iudx_meta:GeoProperty",
+            "@type": "iudx_meta:GeoProperty"
+        },
+        "TimeProperty": {
+            "@id":"iudx_meta:TimeProperty",
+            "@type": "iudx_meta:TimeProperty"
+        }
     }
 }

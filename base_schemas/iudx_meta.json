@@ -4,14 +4,6 @@
   "title": "IUDX-LD meta model",
   "description": "IUDX-LD meta model",
   "definitions": {
-    "datasetId": {
-      "type": "string",
-      "format": "uri"
-    },
-    "instanceId": {
-      "type": "string",
-      "format": "uri"
-    },
     "Property": {
       "type": "object",
       "properties": {
@@ -31,30 +23,24 @@
         "additionalProperties": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/units"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/units"
                 },
                 {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/range"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/range"
                 },
                 {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/observedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
                 },
                 {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
                 },
                 {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/modifiedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
                 },
                 {
                     "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
                 }
             ]
-        },
-        "datasetId": {
-          "$ref": "#/definitions/datasetId"
-        },
-        "instanceId": {
-          "$ref": "#/definitions/instanceId"
         }
       },
       "required": [
@@ -72,6 +58,18 @@
         ]
       }
     },
+    "Time": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Time"
+        },
+        "value": {
+          "type":  "string",
+          "format": "date-time"
+        }
+    },
     "Relationship": {
       "type": "object",
       "properties": {
@@ -84,19 +82,13 @@
           "format": "uri"
         },
         "observedAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/observedAt"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
         },
         "createdAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/modifiedAt"
-        },
-        "datasetId": {
-          "$ref": "#/definitions/datasetId"
-        },
-        "instanceId": {
-          "$ref": "#/definitions/instanceId"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
         }
       },
       "required": [
@@ -125,19 +117,13 @@
           "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
         },
         "observedAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/observedAt"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
         },
         "createdAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/createdAt"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/common.json#/definitions/modifiedAt"
-        },
-        "datasetId": {
-          "$ref": "#/definitions/datasetId"
-        },
-        "instanceId": {
-          "$ref": "#/definitions/instanceId"
+          "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
         }
       },
       "required": [
@@ -147,4 +133,3 @@
     }
   }
 }
-
