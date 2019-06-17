@@ -73,68 +73,68 @@
                     "type":  "string",
                     "format": "date-time"
                 }
-            },
-            "Relationship": {
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "const": "Relationship"
-                    },
-                    "object": {
-                        "type": "string",
-                        "format": "uri"
-                    },
-                    "observedAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
-                    },
-                    "createdAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
-                    },
-                    "modifiedAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
-                    }
+            }
+        },
+        "Relationship": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "Relationship"
                 },
-                "required": [
-                    "type",
-                    "object"
-                ],
-                "additionalProperties": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/definitions/Property"
-                        },
-                        {
-                            "$ref": "#/definitions/Relationship"
-                        }
-                    ]
+                "object": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "observedAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
+                },
+                "createdAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+                },
+                "modifiedAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
                 }
             },
-            "GeoProperty": {
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "const": "GeoProperty"
+            "required": [
+                "type",
+                "object"
+            ],
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/Property"
                     },
-                    "value": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
-                    },
-                    "observedAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
-                    },
-                    "createdAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
-                    },
-                    "modifiedAt": {
-                        "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+                    {
+                        "$ref": "#/definitions/Relationship"
                     }
-                },
-                "required": [
-                    "type",
-                    "value"
                 ]
             }
+        },
+        "GeoProperty": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "GeoProperty"
+                },
+                "value": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
+                },
+                "observedAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
+                },
+                "createdAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+                },
+                "modifiedAt": {
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         }
     }
 }
