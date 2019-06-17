@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json",
-    "title": "IUDX-LD meta model",
-    "description": "IUDX-LD meta model",
+    "title": "IUDX-LD meta-model",
+    "description": "IUDX-LD meta-model",
     "definitions": {
         "Property": {
             "oneOf": [
