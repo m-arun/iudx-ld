@@ -1,6 +1,7 @@
 from pyld import jsonld
 import json
 import requests
+import sys
 
 
 
@@ -17,7 +18,7 @@ def ctxtResolver(contextInput, contextOutput):
 
 
 def main():
-    itemFile = "./item2.json"
+    itemFile = sys.argv[1]
     with open(itemFile, "r") as f:
         item = json.load(f)
     context = {}
