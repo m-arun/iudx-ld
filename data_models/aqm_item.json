@@ -1,0 +1,24 @@
+{
+  "AQI_POLLUTANT": {
+    "type": "Property",
+    "value": "CO"
+  },
+  "AQI": {
+    "type": "Property",
+    "value": 50
+  },
+  "deviceModelInfo": {
+    "type": "Property",
+    "value": {
+      "productID": "BoschClimo"
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [123,12]
+    }
+    
+  }
+}

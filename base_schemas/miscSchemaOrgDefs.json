@@ -28,10 +28,6 @@
                 "@context":  "https://schema.org/alternateName",
                 "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
             },
-            "url": {
-                "@context":  "https://schema.org/url",
-                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
-            },
             "name": {
                 "@context":  "https://schema.org/name",
                 "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
@@ -40,7 +36,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "describes": "Base schema of catalog entries",
     "type": "object",
-    "definitions": {
+    "properties": {
         "name": {
             "type": "string",
             "describes": "Name of the thing"
