@@ -23,11 +23,6 @@
                 }
             }
         },
-        "AIR_PRESSURE": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
-            "describes": "Measured Air pressure",
-            "units": "atm"
-        },
         "AQI": {
             "type": "object",
             "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
