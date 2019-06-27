@@ -9,11 +9,11 @@
             "format": "uri",
             "description": "id for rdfs:Resource objects"
         },
-        "Name": {
+        "name": {
             "type": "string",
             "pattern": "^(\\d|[a-zA-Z]|_)+$",
             "minLength": 1,
-            "description": "NGSI-LD Name"
+            "description": "Name"
         },
         "observedAt": {
             "type": "string",
@@ -159,6 +159,42 @@
                 "after",
                 "between"
             ]
+        },
+        "productSchema": {
+            "brand": {
+                "type": "object",
+                "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+                "describes": "Brand name/Organisation",
+                "properties": {
+                    "name": { 
+                        "$ref": "#/definitions/nameSchema"
+                    },
+                    "url": {
+                        "$ref": "#/definitions/nameSchema"
+                    }
+                }
+            },
+            "model": {
+                "type": "string",
+                "describes": "Textual representation of the model of the product."
+            },
+            "mpn": {
+                "type": "string",
+                "describes": "The Manufacturer Part Number (MPN) of the product."
+            },
+            "productID": {
+                "type": "string",
+                "describes": "Product identifier, such as ISBN number."
+            },
+            "releaseDate": {
+                "type": "string",
+                "format": "date-time",
+                "describes": "The release date of a product. Can be used to identify the exact variant of a product."
+            },
+            "url": {
+                "$ref": "#/definitions/nameSchema",
+                "describes": "Product home page."
+            }
         }
     }
 }

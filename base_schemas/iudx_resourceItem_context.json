@@ -7,6 +7,10 @@
                 "@id": "iudx_resourceItem:resourceServer",
                 "@type": "iudx_meta:Relationship"
             },
+            "tags": {
+                "@id": "iudx_resourceItem:tags",
+                "@type": "iudx_meta:Property"
+            },
             "itemDescription": {
                 "@id": "iudx_resourceItem:itemDescription",
                 "@type": "iudx_meta:Property"
@@ -17,6 +21,14 @@
             },
             "provider": {
                 "@id": "iudx_resourceItem:provider",
+                "@type": "iudx_meta:Relationship"
+            },
+            "resourceId": {
+                "@id": "iudx_resourceItem:resourceId",
+                "@type": "iudx_meta:Property"
+            },
+            "resourceGroup": {
+                "@id": "iudx_resourceItem:resourceGroup",
                 "@type": "iudx_meta:Relationship"
             },
             "location": {
@@ -38,6 +50,22 @@
             "deprecatedAt": {
                 "@id": "iudx_resourceItem:deprecatedAt",
                 "@type": "iudx_meta:TimeProperty"
+            },
+            "itemStatus": {
+                "@id": "iudx_resourceItem:itemStatus",
+                "@type": "iudx_meta:Property"
+            },
+            "accessObject": {
+                "@id": "iudx_resourceItem:accessObject",
+                "@type": "iudx_meta:Property"
+            },
+            "accessObjectURL": {
+                "@id": "iudx_resourceItem:accessObjectURL",
+                "@type": "iudx_meta:Relationship"
+            },
+            "accessObjectVariables": {
+                "@id": "iudx_resourceItem:accessObjectVariables",
+                "@type": "iudx_meta:Property"
             }
         }
     ]

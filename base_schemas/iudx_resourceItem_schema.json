@@ -11,6 +11,22 @@
         "id": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/id"
         },
+        "tags": {
+            "describes": "Array of keywords describing this item",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "Property"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
         "resourceServer": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
             "describes": "The resource server which hosts this resource item"
@@ -18,6 +34,10 @@
         "itemDescription": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
             "describes": "Text description of this item."
+        },
+        "@type": {
+            "type": "string",
+            "describes": "Release type of this resource_item"
         },
         "refDataModel": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
@@ -27,20 +47,54 @@
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
             "describes": "Link to the provider of this resource"
         },
+        "resourceGroup": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
+            "describes": "iri to group node"
+        },
+        "resourceId": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "describes": "id of this resource on the resource server"
+        },
         "location": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/GeoProperty"
         },
         "itemStatus": {
-            "$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.1/iudx_meta.json#/definitions/Property"
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "Property"
+                },
+                "value": {
+                    "type": "string",
+                    "enum": ["active", "deprecated"]
+                }
+            }
         },
         "createdAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/TimeProperty"
         },
         "modifiedAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/TimeProperty"
         },
         "deprecatedAt" : {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/deprecatedAt"
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/TimeProperty"
+        },
+        "accessObject": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "describes": "OpenAPI 3.0 object"
+        },
+        "accessObjectURL": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "describes": "OpenAPI 3.0 object url"
+        },
+        "accessObjectVariables": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "describes": "item specific API variables"
+        },
+        "itemType": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "describes": "iudx item type"
         },
         "additionalProperties": {
             "anyOf": [

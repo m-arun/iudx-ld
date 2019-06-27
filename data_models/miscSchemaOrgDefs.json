@@ -1,0 +1,93 @@
+{
+    "@context": {
+            "releaseDate": {
+                "@context": "https://schema.org/releaseDate",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "url": {
+                "@context": "https://schema.org/url",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "productID": {
+                "@context": "https://schema.org/productID",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "mpn": {
+                "@context": "https://schema.org/mpn",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "model": {
+                "@context": "https://schema.org/model",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "product": {
+                "@context":  "https://schema.org/Product",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "alternateName": {
+                "@context":  "https://schema.org/alternateName",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+            },
+            "url": {
+                "@context":  "https://schema.org/url",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_schema.json#/definitions/Property"
+            },
+            "name": {
+                "@context":  "https://schema.org/name",
+                "@type": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+            }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "describes": "Base schema of catalog entries",
+    "type": "object",
+    "definitions": {
+        "name": {
+            "type": "string",
+            "describes": "Name of the thing"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri",
+            "describes": "URL of the thing"
+        },
+        "alternateName": {
+            "type": "string",
+            "describes": "Alternate name for the thing"
+        },
+        "product": {
+            "brand": {
+                "type": "object",
+                "describes": "Brand name/Organisation",
+                "properties": {
+                    "name": { 
+                        "$ref": "#/definitions/nameSchema"
+                    },
+                    "url": {
+                        "$ref": "#/definitions/nameSchema"
+                    }
+                }
+            },
+            "model": {
+                "type": "string",
+                "describes": "Textual representation of the model of the product."
+            },
+            "mpn": {
+                "type": "string",
+                "describes": "The Manufacturer Part Number (MPN) of the product."
+            },
+            "productID": {
+                "type": "string",
+                "describes": "Product identifier, such as ISBN number."
+            },
+            "releaseDate": {
+                "type": "string",
+                "format": "date-time",
+                "describes": "The release date of a product. Can be used to identify the exact variant of a product."
+            },
+            "url": {
+                "$ref": "#/definitions/nameSchema",
+                "describes": "Product home page."
+            }
+        }
+    }
+}
