@@ -85,7 +85,7 @@
             "describes": "OpenAPI 3.0 object"
         },
         "accessObjectURL": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship",
             "describes": "OpenAPI 3.0 object url"
         },
         "accessObjectVariables": {

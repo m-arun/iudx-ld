@@ -1,24 +1,64 @@
 {
-  "AQI_POLLUTANT": {
-    "type": "Property",
-    "value": "CO"
-  },
-  "AQI": {
-    "type": "Property",
-    "value": 50
-  },
-  "deviceModelInfo": {
-    "type": "Property",
-    "value": {
-      "productID": "BoschClimo"
+    "@context": [
+        {
+            "iudx_iri": "https://iri.iudx.org/"
+        },
+        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_context.json",
+        "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
+    ],
+    "@id": "iudx_iri:aqm_item_123",
+    "itemDescription": "A test item",
+    "refDataModel": {
+        "type": "Relationship",
+        "value": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
+    },
+    "tags": {
+        "type": "Property",
+        "value": ["air","quality","AQI","pollution"]
+    },
+    "resourceServer": {
+        "type": "Relationship",
+        "value": "iudx_iri:pscdcl_server"
+    },
+    "resourceId": {
+        "type": "Property",
+        "value": "aqm_abc_123"
+    },
+    "provider": {
+        "type": "Relationship",
+        "value": "iudx_iri:pscdcl"
+    },
+    "AQI_POLLUTANT": {
+        "type": "Property",
+        "value": "CO"
+    },
+    "AQI": {
+        "type": "Property",
+        "value": 50
+    },
+    "deviceModelInfo": {
+        "type": "Property",
+        "value": {
+            "productID": "BoschClimo"
+        }
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [13.8343, 77.3434]
+        }
+    },
+    "accessObjectURL": {
+        "type": "Relationship",
+        "value": "iudx_iri:aqm_item_123_accessObject
+    },
+    "itemStatus": {
+        "type": "Property",
+        "value": "active"
+    },
+    "createdAt": {
+        "type": "TimeProperty",
+        "value": "2018-11-13T20:20:39+00:00"
     }
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [123,12]
-    }
-    
-  }
 }
