@@ -51,7 +51,7 @@
     },
     "accessObjectURL": {
         "type": "Relationship",
-        "value": "iudx_iri:aqm_item_123_accessObject
+        "value": "iudx_iri:aqm_item_123_accessObject"
     },
     "itemStatus": {
         "type": "Property",
