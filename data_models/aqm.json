@@ -5,14 +5,17 @@
             "xsd": "http://www.w3.org/2001/XMLSchema#",
             "uo": "http://units.open.org/",
             "AQI_POLLUTANT": {
-                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI_POLLUTANT",
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI_POLLUTANT/",
                 "@type": "iudx_meta:Property"
             },
             "AQI": {
-                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI",
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI/",
+                "@type": "iudx_meta:Property"
+            },
+            "productDescription": {
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/productDescription/",
                 "@type": "iudx_meta:Property"
             }
-
         }
      ],
     "$schema": "http://json-schema.org/draft-07/schema#",
