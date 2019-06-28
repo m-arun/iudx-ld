@@ -4,9 +4,9 @@
         "iudx_meta": "iudx:iudx_meta.json#/definitions/",
         "id": "@id",
         "type": "@type",
-        "value": "http:uri.iudx.org/hasValue",
+        "value": "http//:uri.iudx.org/hasValue",
         "object": {
-            "@id": "http:uri.iudx.org/hasObject",
+            "@id": "http//:uri.iudx.org/hasObject",
             "@type":"@id"
         },
         "Property": {
