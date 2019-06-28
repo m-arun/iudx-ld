@@ -23,10 +23,11 @@
                             ]
                         },
                         "additionalProperties": "false",
-                    "required": [
-                        "type",
-                        "value"
-                    ]
+                        "required": [
+                            "type",
+                            "value"
+                        ]
+                    }
                 }
             ]
         },
