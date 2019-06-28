@@ -29,7 +29,7 @@
         "object": "iudx_iri:pscdcl"
     },
     "productDescription": {
-        "type": "Properaty",
+        "type": "Property",
         "value": {
             "brand": "iisc",
             "model": "aqm",
