@@ -32,9 +32,9 @@
         "type": "Property",
         "value": "CO"
     },
-    "AQI": {
+    "AQI": 
         "type": "Property",
-        "value": 50
+        "value": 2
     },
     "deviceModelInfo": {
         "type": "Property",

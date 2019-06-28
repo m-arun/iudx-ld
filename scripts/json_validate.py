@@ -1,12 +1,17 @@
 import jsonschema
 import json
+import sys
 
 #schemaFile = "base_schemas/iudx_resourceItem_schema.json"
 #itemFile = "ex_items/testItem.json"
 
 #schemaFile = "../base_schemas/iudx_resourceItem_schema.json"
-schemaFile = "../data_models/aqm.json"
-itemFile = "../data_models/aqm_item.json"
+
+schemaFile = sys.argv[1]
+itemFile = sys.argv[2]
+
+#schemaFile = "../data_models/aqm.json"
+#itemFile = "../data_models/aqm_item.json"
 
 
 with open(itemFile, "r") as f:

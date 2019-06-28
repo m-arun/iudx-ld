@@ -11,30 +11,18 @@
             "describes": "Physical location of the AQM sensor", 
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/GeoProperty"
         },
-        "deviceModelInfo": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "const": "Property"
-                },
-                "value": {
-                    "$ref":"https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"
-                }
-            }
-        },
         "AQI": {
             "describes": "Overall AQI ",
             "units": "dimensionless",
             "valueSchema": {
-                "type": "integer",
+                "type": "number",
                 "minimum": 0,
                 "maximum": 1000
             },
-            "type": "object",
-            "anyOf": [
+            "oneOf": [
                 {
                     "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+                    "type": "object",
                     "properties": {
                         "value": {
                             "$ref": "#/properties/AQI/valueSchema"
@@ -42,9 +30,10 @@
                     }
                 },
                 {
+                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+                    "type": "number",
                     "$ref": "#/properties/AQI/valueSchema"
                 }
-
             ]
         },
         "AQI_POLLUTANT": {
