@@ -19,7 +19,7 @@
     "describes": "Air Quality Base dataModel for AQM sensors deployed in Pune City.",
     "properties": {
         "productDescription": {
-            "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"
+            "allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]
         },
         "AQI": {
             "describes": "Overall AQI ",

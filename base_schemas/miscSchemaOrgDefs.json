@@ -65,17 +65,20 @@
                     "const": "Property"
                 },
                 "value": {
-                    "brand": {
-                        "type": "string",
-                        "describes": "Brand name/Organisation"
-                    },
-                    "model": {
-                        "type": "string",
-                        "describes": "Textual representation of the model of the product."
-                    },
-                    "url": {
-                        "$ref": "#/definitions/name",
-                        "describes": "Product home page."
+                    "type": "object",
+                    "properties": {
+                        "brand": {
+                            "type": "string",
+                            "describes": "Brand name/Organisation"
+                        },
+                        "model": {
+                            "type": "string",
+                            "describes": "Textual representation of the model of the product."
+                        },
+                        "url": {
+                            "$ref": "#/definitions/name",
+                            "describes": "Product home page."
+                        }
                     }
                 }
             }
