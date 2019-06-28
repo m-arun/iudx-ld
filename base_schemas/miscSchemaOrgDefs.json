@@ -35,56 +35,47 @@
     },
     "$schema": "http://json-schema.org/draft-07/schema#",
     "describes": "Base schema of catalog entries",
-    "type": "object",
-    "properties": {
+    "definitions": {
         "name": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
             "type": "string",
             "describes": "Name of the thing"
         },
         "url": {
-            "type": "string",
-            "format": "uri",
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "value": {
+                "type": "string",
+                "format": "uri"
+            },
             "describes": "URL of the thing"
         },
         "alternateName": {
-            "type": "string",
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+            "value": {
+                "type": "string"
+            },
             "describes": "Alternate name for the thing"
         },
         "product": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
             "type": "object",
             "properties": {
-                "brand": {
-                    "type": "object",
-                    "describes": "Brand name/Organisation",
-                    "properties": {
-                        "name": { 
-                            "$ref": "#/definitions/nameSchema"
+                "type": {
+                    "type": "Property",
+                    "value": {
+                        "brand": {
+                            "type": "string",
+                            "describes": "Brand name/Organisation"
+                        },
+                        "model": {
+                            "type": "string",
+                            "describes": "Textual representation of the model of the product."
                         },
                         "url": {
-                            "$ref": "#/definitions/nameSchema"
+                            "$ref": "#/definitions/name",
+                            "describes": "Product home page."
                         }
                     }
-                },
-                "model": {
-                    "type": "string",
-                    "describes": "Textual representation of the model of the product."
-                },
-                "mpn": {
-                    "type": "string",
-                    "describes": "The Manufacturer Part Number (MPN) of the product."
-                },
-                "productID": {
-                    "type": "string",
-                    "describes": "Product identifier, such as ISBN number."
-                },
-                "releaseDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "describes": "The release date of a product. Can be used to identify the exact variant of a product."
-                },
-                "url": {
-                    "$ref": "#/definitions/nameSchema",
-                    "describes": "Product home page."
                 }
             }
         }

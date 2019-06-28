@@ -1,15 +1,25 @@
 {
-    "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "uo": "http://units.open.org/"
-    },
+    "@context": [
+        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_core_context.json",
+       {
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "uo": "http://units.open.org/",
+            "AQI_POLLUTANT": {
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI_POLLUTANT"
+            },
+            "AQI": {
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI",
+                "@type": ""
+            }
+
+        }
+     ],
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "describes": "Air Quality Base dataModel for AQM sensors deployed in Pune City.",
     "properties": {
-        "location": {
-            "describes": "Physical location of the AQM sensor", 
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/GeoProperty"
+        "productDescription": {
+            "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscmiscSchemaOrgDefs.json#/definitions/product"
         },
         "AQI": {
             "describes": "Overall AQI ",
