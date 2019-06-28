@@ -10,7 +10,7 @@
     "itemDescription": "A test item",
     "refDataModel": {
         "type": "Relationship",
-        "value": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
+        "object": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
     },
     "tags": {
         "type": "Property",
@@ -18,7 +18,7 @@
     },
     "resourceServer": {
         "type": "Relationship",
-        "value": "iudx_iri:pscdcl_server"
+        "object": "iudx_iri:pscdcl_server"
     },
     "resourceId": {
         "type": "Property",
@@ -26,7 +26,7 @@
     },
     "provider": {
         "type": "Relationship",
-        "value": "iudx_iri:pscdcl"
+        "object": "iudx_iri:pscdcl"
     },
     "AQI_POLLUTANT": {
         "type": "Property",
@@ -51,7 +51,7 @@
     },
     "accessObjectURL": {
         "type": "Relationship",
-        "value": "iudx_iri:aqm_item_123_accessObject"
+        "object": "iudx_iri:aqm_item_123_accessObject"
     },
     "itemStatus": {
         "type": "Property",

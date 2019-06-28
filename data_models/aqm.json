@@ -24,17 +24,28 @@
             }
         },
         "AQI": {
-            "type": "object",
-            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 1000
-                }
-            },
             "describes": "Overall AQI ",
-            "units": "dimensionless"
+            "units": "dimensionless",
+            "valueSchema": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000
+            },
+            "type": "object",
+            "anyOf": [
+                {
+                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+                    "properties": {
+                        "value": {
+                            "$ref": "#/properties/AQI/valueSchema"
+                        }
+                    }
+                },
+                {
+                    "$ref": "#/properties/AQI/valueSchema"
+                }
+
+            ]
         },
         "AQI_POLLUTANT": {
             "type": "object",
