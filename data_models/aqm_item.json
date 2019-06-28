@@ -28,11 +28,19 @@
         "type": "Relationship",
         "object": "iudx_iri:pscdcl"
     },
+    "productDescription": {
+        "type": "Property",
+        "value": {
+            "brand": "iisc",
+            "model": "aqm",
+            "url": "https://iisc.aqm.com"
+        }
+    },
     "AQI_POLLUTANT": {
         "type": "Property",
         "value": "CO"
     },
-    "AQI": 
+    "AQI": {
         "type": "Property",
         "value": 2
     },
