@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json",
     "title": "IUDX-LD meta-model definitions",
-    "description": " abc IUDX-LD meta-model",
+    "description": "IUDX-LD meta-model",
     "definitions": {
         "Property": {
             "oneOf": [
@@ -22,12 +22,43 @@
                                 "object"
                             ]
                         },
-                        "additionalProperties": "false",
-                        "required": [
-                            "type",
-                            "value"
-                        ]
-                    }
+                        "additionalProperties": {
+                            "anyOf": [
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/units"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/range"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+                                },
+                                {
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                {
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                    ]
                 }
             ]
         },
