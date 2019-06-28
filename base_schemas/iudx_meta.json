@@ -27,13 +27,6 @@
                         "type",
                         "value"
                     ]
-                },
-                {
-                    "type": [
-                        "string",
-                        "number",
-                        "boolean"
-                    ]
                 }
             ]
         },
