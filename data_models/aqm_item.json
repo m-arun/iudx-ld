@@ -53,7 +53,7 @@
         "type": "GeoProperty",
         "value": {
             "type": "Point",
-            "coordinates": [13.8343, 77.3434]
+            "value": [13.8343, 77.3434]
         }
     },
     "accessObjectURL": {

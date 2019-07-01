@@ -4,34 +4,34 @@
     "title": "geometry",
     "description": "One geometry as defined by GeoJSON. Licensed as per original source is https://github.com/fge/sample-json-schemas/blob/master/geojson/geometry.json",
     "type": "object",
-    "required": [ "type", "coordinates" ],
+    "required": [ "type", "value" ],
     "oneOf": [
         {
             "title": "Point",
             "properties": {
                 "type": { "enum": [ "Point" ] },
-                "coordinates": { "$ref": "#/definitions/position" }
+                "value": { "$ref": "#/definitions/position" }
             }
         },
         {
             "title": "MultiPoint",
             "properties": {
                 "type": { "enum": [ "MultiPoint" ] },
-                "coordinates": { "$ref": "#/definitions/positionArray" }
+                "value": { "$ref": "#/definitions/positionArray" }
             }
         },
         {
             "title": "LineString",
             "properties": {
                 "type": { "enum": [ "LineString" ] },
-                "coordinates": { "$ref": "#/definitions/lineString" }
+                "value": { "$ref": "#/definitions/lineString" }
             }
         },
         {
             "title": "MultiLineString",
             "properties": {
                 "type": { "enum": [ "MultiLineString" ] },
-                "coordinates": {
+                "value": {
                     "type": "array",
                     "items": { "$ref": "#/definitions/lineString" }
                 }
@@ -41,14 +41,14 @@
             "title": "Polygon",
             "properties": {
                 "type": { "enum": [ "Polygon" ] },
-                "coordinates": { "$ref": "#/definitions/polygon" }
+                "value": { "$ref": "#/definitions/polygon" }
             }
         },
         {
             "title": "MultiPolygon",
             "properties": {
                 "type": { "enum": [ "MultiPolygon" ] },
-                "coordinates": {
+                "value": {
                     "type": "array",
                     "items": { "$ref": "#/definitions/polygon" }
                 }
