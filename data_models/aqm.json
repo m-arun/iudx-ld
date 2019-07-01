@@ -6,15 +6,15 @@
             "uo": "http://units.open.org/",
             "AQI_POLLUTANT": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI_POLLUTANT/",
-                "@type": "iudx_meta:Property"
+                "@type": "core_defs:Property"
             },
             "AQI": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI/",
-                "@type": "iudx_meta:Property"
+                "@type": "core_defs:Property"
             },
             "productDescription": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/productDescription/",
-                "@type": "iudx_meta:Property"
+                "@type": "core_defs:Property"
             }
         }
      ],
@@ -35,7 +35,7 @@
             },
             "oneOf": [
                 {
-                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
                     "type": "object",
                     "properties": {
                         "value": {
@@ -44,7 +44,7 @@
                     }
                 },
                 {
-                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
                     "type": "number",
                     "$ref": "#/properties/AQI/valueSchema"
                 }
@@ -52,7 +52,7 @@
         },
         "AQI_POLLUTANT": {
             "type": "object",
-            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"}],
+            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "describes": "Major pollutant in the AQI index.",
             "properties": {
                 "value": {

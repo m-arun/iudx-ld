@@ -163,7 +163,7 @@
         "productSchema": {
             "brand": {
                 "type": "object",
-                "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property",
+                "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property",
                 "describes": "Brand name/Organisation",
                 "properties": {
                     "name": { 

@@ -7,8 +7,8 @@ import sys
 
 #schemaFile = "../base_schemas/iudx_resourceItem_schema.json"
 
-schemaFile = sys.argv[1]
-itemFile = sys.argv[2]
+itemFile = sys.argv[1]
+schemaFile = sys.argv[2]
 
 #schemaFile = "../data_models/aqm.json"
 #itemFile = "../data_models/aqm_item.json"

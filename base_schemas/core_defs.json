@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json",
+    "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json",
     "title": "IUDX-LD meta model definitions ",
     "description": "IUDX-LD meta-model",
     "definitions": {
@@ -25,10 +25,10 @@
                         "additionalProperties": {
                             "anyOf": [
                                 {
-                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Relationship"
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Relationship"
                                 },
                                 {
-                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_meta.json#/definitions/Property"
+                                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"
                                 }
                             ]
                         }
@@ -72,13 +72,13 @@
                     "format": "uri"
                 },
                 "observedAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 },
                 "createdAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 },
                 "modifiedAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 }
             },
             "required": [
@@ -107,13 +107,13 @@
                     "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
                 },
                 "observedAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/observedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 },
                 "createdAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/createdAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 },
                 "modifiedAt": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_common.json#/definitions/modifiedAt"
+                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"
                 }
             },
             "required": [
