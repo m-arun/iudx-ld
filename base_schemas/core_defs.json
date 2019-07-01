@@ -4,7 +4,7 @@
     "title": "IUDX-LD meta model definitions ",
     "description": "IUDX-LD meta-model",
     "type": "object",
-    "properties": {
+    "definitions": {
         "Property": {
             "oneOf": [
                 {
