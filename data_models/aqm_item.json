@@ -20,7 +20,7 @@
         "object": "iudx_iri:pscdcl_server"
     },
     "resourceId": {
-        "type": "Propertya",
+        "type": "Property",
         "value": "aqm_abc_123"
     },
     "provider": {

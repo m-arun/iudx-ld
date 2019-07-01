@@ -63,7 +63,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "const": "Property"
+                    "enum": ["Property"]
                 },
                 "value": {
                     "type": "string",
