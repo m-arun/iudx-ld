@@ -3,7 +3,6 @@
         {
             "iudx_iri": "https://iri.iudx.org/"
         },
-        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_resourceItem_context.json",
         "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
     ],
     "@id": "iudx_iri:aqm_item_123",

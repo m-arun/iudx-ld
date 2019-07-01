@@ -1,6 +1,6 @@
 {
     "@context": [
-        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/iudx_core_context.json",
+        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_context.json",
        {
             "xsd": "http://www.w3.org/2001/XMLSchema#",
             "uo": "http://units.open.org/",
