@@ -24,7 +24,7 @@
         "value": "aqm_abc_123"
     },
     "provider": {
-        "type": "Relationship",
+        "type": "Relationshipa",
         "object": "iudx_iri:pscdcl"
     },
     "productDescription": {
