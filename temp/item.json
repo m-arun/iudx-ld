@@ -1,6 +1,6 @@
 {
-    "foo": {
-        "type":"Prooperty",
-        "value":"abce"
+    "AQI_POLLUTANT": {
+        "type": "Propertya",
+        "value": "SO2"
     }
 }

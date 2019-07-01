@@ -52,7 +52,7 @@
             "describes": "iri to group node"
         },
         "resourceId": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property",
+            "allOf": [{"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "describes": "id of this resource on the resource server"
         },
         "location": {
