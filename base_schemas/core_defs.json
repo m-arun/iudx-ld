@@ -3,7 +3,8 @@
     "id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json",
     "title": "IUDX-LD meta model definitions ",
     "description": "IUDX-LD meta-model",
-    "definitions": {
+    "type": "object",
+    "properties": {
         "Property": {
             "oneOf": [
                 {
