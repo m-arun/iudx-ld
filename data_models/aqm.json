@@ -20,7 +20,7 @@
      ],
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
-    "describes": "Air Quality Base dataModel for AQM sensors deployed in Pune City.",
+    "describes": "Air Quality  dataModel for AQM sensors deployed in Pune City.",
     "properties": {
         "productDescription": {
             "allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]
