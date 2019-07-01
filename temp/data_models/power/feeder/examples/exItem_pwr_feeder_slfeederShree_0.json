@@ -1,0 +1,36 @@
+{
+  "id": "u7734jd399834r8696",
+  "itemDescription": "Streetlight Feeder Item",
+  "refDataModel": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/power/feeder/examples/exdataModel_pwr_feeder_slfeederShree_0.json#/dataModelSchema",
+  "refBaseSchema": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json",
+  "refBaseSchemaRelease": "v0.0.0",
+  "provider": {
+    "entityId": "PSCDCL",
+    "entityIdentityType": "X509",
+    "entityIdentityProviderURL" : "https://ca.iudx.org.in",
+    "entityURL" : "https://punesmartcity.in/"
+  },
+  "NAME": "XYZ",
+  "location": {
+    "latitude": 18.4813499,
+    "longitude": 73.89856
+  },
+  "PANEL_ID": "18419",
+  "PANEL_NAME": "KN-13",
+  "tags":["streetlighting","streetlight","feeder", "power"],
+  "__itemStatus": "active",
+  "__itemType": "item",
+  "__createdAt": "2019-02-20T17:30:06.093121",
+  "latestResourceData": "https://pune.iudx.org.in/api/1.0.0/resource/latest/streetlight-feeder-sree/XYZ",
+  "accessInformation": [
+     {
+       "accessSchemaType": "openAPI",
+       "accessSchema": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/power/feeder/examples/exApiObject_pwr_feeder_slfeederShree_0.json",
+       "accessVariables": {
+          "resourceServerId": "https://pune.iudx.org.in:443",
+          "resourceId": "XYZ",
+          "resourceClass": "streetlight-feeder-sree"
+        }
+     }
+  ]
+}

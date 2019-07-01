@@ -33,9 +33,9 @@
                 "minimum": 0,
                 "maximum": 1000
             },
+            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "oneOf": [
                 {
-                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
                     "type": "object",
                     "properties": {
                         "value": {
@@ -44,7 +44,6 @@
                     }
                 },
                 {
-                    "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
                     "type": "number",
                     "$ref": "#/properties/AQI/valueSchema"
                 }

@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "describes": "Crowd Sourced dataset provided by ChangeBhai.org. Contains geotagged images along with public issue annotations.",
+    "properties": {
+        "id": {
+            "describes": "id of the geo-tagged image",
+            "type": "string"
+        },
+        "locationCoverage": {
+            "type": "object",
+            "properties": {
+                "area": {
+                    "$ref": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/schema_defs/locationDefs.json#/definitions/geoJSONPolygon"
+                },
+                "coverageDescription":{
+                    "type": "string",
+                    "describes": "Name of city and/or areas/localities within the city."
+                }
+            }
+        },
+        "Latitude": {
+            "describes": "Latitude of the geo-tagged image", 
+            "type": "string"
+        },
+        "Longitude": {
+            "describes": "Longitude of the geo-tagged image", 
+            "type": "string"
+        },
+        "Radius": {
+            "describes": "Radius of the area for which geo-tagged images are required", 
+            "type": "string"
+        },
+        "Image": {
+            "describes": "Link of the image", 
+            "type": "string",
+            "format": "uri"
+        },
+        "Category": {
+            "describes": "Classification of the image",
+            "type": "string",
+            "enum": ["Garbage","Footpaths","Roads","Encroachment","Illegal Ads","Wrong Parking", "Street Lights","Signages","Bus Stops","Dividers","Stray Menace","Public Toilets","Road Markings","Traffic Signals","Traffic Violations","Road Markings"]
+        },
+        "Severity": {
+            "describes": "Severity of the category", 
+            "type": "string",
+            "enum": ["low","high","medium"]
+        }
+
+    }
+}
