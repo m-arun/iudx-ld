@@ -1,103 +1,103 @@
 {
     "@context": {
         "iudx": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/",
-        "iudx_meta": "iudx:core_defs.json#/definitions/",
+        "core": "iudx:core_defs.json#/definitions/",
         "id": "@id",
         "type": "@type",
-        "value": "iudx_meta:hasValue",
+        "value": "core:hasValue",
         "object": {
-            "@id": "iudx_meta:hasObject",
+            "@id": "core:hasObject",
             "@type":"@id"
         },
         "Property": {
-            "@id":"iudx_meta:Property",
-            "@type": "iudx_meta:Property"
+            "@id":"core:Property",
+            "@type": "core:Property"
         },
         "Relationship": {
-            "@id":"iudx_meta:Relationship",
-            "@type": "iudx_meta:Relationship"
+            "@id":"core:Relationship",
+            "@type": "core:Relationship"
         },
         "GeoProperty": {
-            "@id":"iudx_meta:GeoProperty",
-            "@type": "iudx_meta:GeoProperty"
+            "@id":"core:GeoProperty",
+            "@type": "core:GeoProperty"
         },
         "TimeProperty": {
-            "@id":"iudx_meta:TimeProperty",
-            "@type": "iudx_meta:TimeProperty"
+            "@id":"core:TimeProperty",
+            "@type": "core:TimeProperty"
         },
         "iudx_resourceItem": "iudx:resourceItem_schema.json#/properties/",
         "iudx_resourceServer": "iudx:resourceServer_schema.json#/properties/",
         "resourceServer": {
             "@id": "iudx_resourceItem:resourceServer",
-            "@type": "iudx_meta:Relationship"
+            "@type": "core:Relationship"
         },
         "tags": {
             "@id": "iudx_resourceItem:tags",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "itemDescription": {
             "@id": "iudx_resourceItem:itemDescription",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "refDataModel": {
             "@id": "iudx_resourceItem:refDataModel",
-            "@type": "iudx_meta:Relationship"
+            "@type": "core:Relationship"
         },
         "provider": {
             "@id": "iudx_resourceItem:provider",
-            "@type": "iudx_meta:Relationship"
+            "@type": "core:Relationship"
         },
         "resourceId": {
             "@id": "iudx_resourceItem:resourceId",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "resourceGroup": {
             "@id": "iudx_resourceItem:resourceGroup",
-            "@type": "iudx_meta:Relationship"
+            "@type": "core:Relationship"
         },
         "location": {
             "@id": "iudx_resourceItem:location",
-            "@type": "iudx_meta:GeoProperty"
+            "@type": "core:GeoProperty"
         },
         "itemStatus": {
             "@id": "iudx_resourceItem:itemStatus",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "createdAt": {
             "@id": "iudx_resourceItem:createdAt",
-            "@type": "iudx_meta:TimeProperty"
+            "@type": "core:TimeProperty"
         },
         "modifiedAt": {
             "@id": "iudx_resourceItem:modifiedAt",
-            "@type": "iudx_meta:TimeProperty"
+            "@type": "core:TimeProperty"
         },
         "deprecatedAt": {
             "@id": "iudx_resourceItem:deprecatedAt",
-            "@type": "iudx_meta:TimeProperty"
+            "@type": "core:TimeProperty"
         },
         "accessObject": {
             "@id": "iudx_resourceItem:accessObject",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "accessObjectURL": {
             "@id": "iudx_resourceItem:accessObjectURL",
-            "@type": "iudx_meta:Relationship"
+            "@type": "core:Relationship"
         },
         "accessObjectVariables": {
             "@id": "iudx_resourceItem:accessObjectVariables",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "serverUri": {
             "@id": "iudx_resourceServer:serverUri",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "serverDescription": {
             "@id": "iudx_resourceServer:serverDescription",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         },
         "serverStatus": {
             "@id": "iudx_resourceServer:serverStatus",
-            "@type": "iudx_meta:Property"
+            "@type": "core:Property"
         }
     }
 }
