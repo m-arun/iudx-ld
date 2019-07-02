@@ -16,7 +16,7 @@
             "allOf": [{"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "type": "object",
             "properties": {
-                "@value": {
+                "value": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -36,7 +36,7 @@
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property",
             "describes": "Text description of this item."
         },
-        "@type": {
+        "type": {
             "type": "string",
             "describes": "Release type of this resource_item"
         },
@@ -62,7 +62,7 @@
         "itemStatus": {
             "type": "object",
             "properties": {
-                "@value": {
+                "value": {
                     "type": "string",
                     "enum": ["active", "deprecated"]
                 }

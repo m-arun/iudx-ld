@@ -28,25 +28,24 @@ def main():
     item["@context"] = context
     item.update(doc)
 
-    print(context)
 
-#    expanded = jsonld.expand(item)
-#    print("Expanded")
-#    print(json.dumps(expanded, indent=2))
-#    print("\n\n")
-#    compacted = jsonld.compact(expanded,context)
-#    print("Compacted")
-#    print(json.dumps(compacted, indent=2))
-#    print("\n\n")
-#    flattened = jsonld.flatten(compacted, context)
-#    print("Flattened")
-#    print(json.dumps(flattened, indent=2))
-#    print("\n\n")
-#    normalized = jsonld.normalize(
-#        item, {'algorithm': 'URDNA2015', 'format': 'application/n-quads'})
-#    print("Normalized")
-#    print(json.dumps(normalized, indent=2))
-#    print("\n\n")
+    expanded = jsonld.expand(item)
+    print("Expanded")
+    print(json.dumps(expanded, indent=2))
+    print("\n\n")
+    compacted = jsonld.compact(expanded,context)
+    print("Compacted")
+    print(json.dumps(compacted, indent=2))
+    print("\n\n")
+    flattened = jsonld.flatten(compacted, context)
+    print("Flattened")
+    print(json.dumps(flattened, indent=2))
+    print("\n\n")
+    normalized = jsonld.normalize(
+        item, {'algorithm': 'URDNA2015', 'format': 'application/n-quads'})
+    print("Normalized")
+    print(json.dumps(normalized, indent=2))
+    print("\n\n")
 
 
 
