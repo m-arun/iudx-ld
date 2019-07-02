@@ -28,6 +28,10 @@
                 }
             }
         },
+        "refBaseSchema": {
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property",
+            "describes": "Base schema for this item"
+        },
         "resourceServer": {
             "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Relationship",
             "describes": "The resource server which hosts this resource item"

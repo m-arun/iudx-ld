@@ -1,6 +1,7 @@
 {
     "@context": {
         "iudx": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/",
+        "iudx_iri": "https://iri.iudx.org/",
         "core": "iudx:core_defs.json#/definitions/",
         "id": "@id",
         "type": "@type",

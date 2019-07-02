@@ -1,10 +1,11 @@
 import json
 
 
+dataModelPath = "https://raw.githubusercontent.com/rraks/iudx-ld/master/temp/data_models/environment/floodSensor/env_flood_climoPune_0_ld.json"
 itemPath = "../temp/data_models/environment/floodSensor/examples/exItem_env_flood_climoPune_0.json"
 itemNameList = itemPath.split("/")
 itemName = itemNameList[-1]
-path_to_item = itemNameList[itemNameList.index("examples"):]
+path_to_item = "".join(a+"/" for a in itemNameList[:itemNameList.index("examples")+1])
 
 
 resourceItemSchemaPath = "../base_schemas/resourceItem_schema.json"
@@ -15,7 +16,7 @@ with open(itemPath,"r") as f:
 
 schema = {}
 with open(resourceItemSchemaPath,"r") as f:
-    schema = json.load(f)
+    schema = json.load(f)["properties"]
 
 def mkProperty(prop):
     temp = {}
@@ -44,8 +45,16 @@ def mkLocation(prop):
     return temp
 
 
+item.pop("refBaseSchemaRelease")
+
 item["@id"] = item["id"]
 item.pop("id")
+
+item["refBaseSchema"] = mkProperty(item["refBaseSchema"])
+
+item["provider"] = mkRelationship("iudx_iri:pscdcl")
+item["refDataModel"] = mkProperty(item["refDataModel"])
+item["itemDescription"] = mkProperty(item["itemDescription"])
 
 t = item["tags"]
 item["tags"] = mkProperty(t)
@@ -55,7 +64,7 @@ item["location"] = mkLocation(item["location"])
 item["itemType"] = mkProperty("resourceItem" )
 item.pop("__itemType")
 
-item["status"] = mkProperty(item["__itemStatus"])
+item["itemStatus"] = mkProperty(item["__itemStatus"])
 item.pop("__itemStatus")
 
 item["createdAt"] = mkTimeProperty(item["__createdAt"])
@@ -76,15 +85,19 @@ item["accessObjectVariables"]["value"]["resourceClass"] = item["accessInformatio
 item["accessObjectVariables"]["value"]["NAME"] = item["NAME"]
 item.pop("accessInformation")
 
+item["@context"] = []
+item["@context"].append(dataModelPath)
 
-dm_fields = list( set(item.keys()) - set(schema.keys()) )
+
+dm_fields = list( set(item.keys()) - set(schema.keys()) - set(["@id"]) ) 
+print(dm_fields)
 
 for dmField in dm_fields:
     item[dmField] = mkProperty(item[dmField])
 
-print(json.dumps(item, f, indent=4))
-#with open(path_to_dm_folder + dm_name[:-5] + "_ld.json", "w") as f:
-#    json.dump(dm, f, indent=4, sort_keys=true)
+print(path_to_item + itemName[:-5] + "_ld.json")
+with open(path_to_item + itemName[:-5] + "_ld.json", "w") as f:
+    json.dump(item, f, indent=4, sort_keys=True)
 
 
 

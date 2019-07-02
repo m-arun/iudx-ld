@@ -1,0 +1,128 @@
+{
+    "@context": {
+        "type": "Property",
+        "value": [
+            "https://raw.githubusercontent.com/rraks/iudx-ld/master/temp/data_models/environment/floodSensor/env_flood_climoPune_0_ld.json"
+        ]
+    },
+    "@id": {
+        "type": "Property",
+        "value": "akdfi74938nid8kjfvko4"
+    },
+    "NAME": {
+        "type": "Property",
+        "value": "XYZ"
+    },
+    "STATION_ID": {
+        "type": "Property",
+        "value": "FWR015"
+    },
+    "accessObjectURL": {
+        "type": "Property",
+        "value": {
+            "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/environment/floodSensor/examples/exApiObject_env_flood_climoPune_0.json",
+            "type": "Relationship"
+        }
+    },
+    "accessObjectVariables": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": {
+                "NAME": "XYZ",
+                "ip": "https://pune.iudx.org.in",
+                "port": "443",
+                "resourceClass": "flood-sensor"
+            }
+        }
+    },
+    "createdAt": {
+        "type": "Property",
+        "value": {
+            "type": "TimeProperty",
+            "value": "2019-02-20T10:30:06.093121"
+        }
+    },
+    "itemDescription": {
+        "type": "Property",
+        "value": "Flood sensing station"
+    },
+    "itemType": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": "resourceItem"
+        }
+    },
+    "latestResourceData": {
+        "type": "Property",
+        "value": "https://pune.iudx.org.in/api/1.0.0/resource/latest/flood-sensor/XYZ"
+    },
+    "location": {
+        "type": "Property",
+        "value": {
+            "type": "GeoProperty",
+            "value": {
+                "type": "Point",
+                "value": [
+                    18.581797,
+                    73.8727111
+                ]
+            }
+        }
+    },
+    "provider": {
+        "type": "Property",
+        "value": {
+            "entityId": "smart-cities-rbccps",
+            "entityIdentityProviderURL": "https://ca.iudx.org.in",
+            "entityIdentityType": "X509",
+            "entityURL": "https://example.iudx-provider.org"
+        }
+    },
+    "refBaseSchema": {
+        "type": "Property",
+        "value": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json"
+    },
+    "refBaseSchemaRelease": {
+        "type": "Property",
+        "value": "v0.0.0"
+    },
+    "refDataModel": {
+        "type": "Property",
+        "value": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/environment/floodSensor/examples/exdataModel_env_flood_climoPune_0.json#/dataModelSchema"
+    },
+    "resourceId": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": "XYZ"
+        }
+    },
+    "resourceServer": {
+        "type": "Property",
+        "value": {
+            "object": "iudx_iri:pscdcl_server",
+            "type": "Relationship"
+        }
+    },
+    "status": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": "active"
+        }
+    },
+    "tags": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": [
+                "flooding",
+                "flood",
+                "flood alert",
+                "flood danger"
+            ]
+        }
+    }
+}
