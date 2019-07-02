@@ -234,10 +234,6 @@
                 }
             ],
             "describes": "Functional status of flood sensing site/station/device",
-            "enum": [
-                "Active",
-                "Inactive"
-            ],
             "oneOf": [
                 {
                     "properties": {
@@ -253,6 +249,10 @@
                 }
             ],
             "valueSchema": {
+                "enum": [
+                    "Active",
+                    "Inactive"
+                ],
                 "type": "string"
             }
         },
@@ -288,11 +288,6 @@
                 }
             ],
             "describes": "Flooding Level STATUS",
-            "enum": [
-                "Danger",
-                "Alert",
-                "Normal"
-            ],
             "oneOf": [
                 {
                     "properties": {
@@ -308,6 +303,11 @@
                 }
             ],
             "valueSchema": {
+                "enum": [
+                    "Danger",
+                    "Alert",
+                    "Normal"
+                ],
                 "type": "string"
             }
         },

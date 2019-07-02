@@ -53,8 +53,13 @@ for prop in props:
         valueSchema["type"] = props[prop]["type"]
         if("minimum" in prop):
             valueSchema["minimum"] = props[prop]["minimum"]
+            props[prop].pop("minimum")
         if("maximum" in props[prop]):
             valueSchema["maximum"] = props[prop]["maximum"]
+            props[prop].pop("maximum")
+        if("enum" in props[prop]):
+            valueSchema["enum"] = props[prop]["enum"]
+            props[prop].pop("enum")
         props[prop]["valueSchema"] = valueSchema
         oneOf = makeOneOf(prop)
         props[prop]["allOf"] = []

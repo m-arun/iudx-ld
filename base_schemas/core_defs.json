@@ -10,9 +10,9 @@
                 {
                     "type": "object",
                     "properties": {
-                        "type": {
+                        "@type": {
                             "type": "string",
-                            "enum": ["Property"]
+                            "enum": ["core:Property"]
                         },
                         "value": {
                             "type": [
@@ -63,9 +63,9 @@
         "Relationship": {
             "type": "object",
             "properties": {
-                "type": {
+                "@type": {
                     "type": "string",
-                    "enum": ["Relationship"]
+                    "enum": ["core:Relationship"]
                 },
                 "object": {
                     "type": "string",
@@ -99,9 +99,9 @@
         "GeoProperty": {
             "type": "object",
             "properties": {
-                "type": {
+                "@type": {
                     "type": "string",
-                    "enum": ["GeoProperty"]
+                    "enum": ["core:GeoProperty"]
                 },
                 "value": {
                     "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
