@@ -20,25 +20,25 @@ with open(resourceItemSchemaPath,"r") as f:
 
 def mkProperty(prop):
     temp = {}
-    temp["type"] = "core:Property" 
+    temp["type"] = "Property" 
     temp["value"] = prop
     return temp
 
 def mkRelationship(rel):
     temp = {}
-    temp["type"] = "core:Relationship" 
+    temp["type"] = "Relationship" 
     temp["object"] = rel
     return temp
 
 def mkTimeProperty(prop):
     temp = {}
-    temp["type"] = "core:TimeProperty" 
+    temp["type"] = "TimeProperty" 
     temp["value"] = prop
     return temp
 
 def mkLocation(prop):
     temp = {}
-    temp["type"] = "core:GeoProperty"
+    temp["type"] = "GeoProperty"
     temp["value"] = {}
     temp["value"]["type"] = "Point"
     temp["value"]["value"] = [prop["latitude"], prop["longitude"]]
@@ -77,7 +77,7 @@ item["resourceId"] = {}
 item["resourceId"] = mkProperty(item["accessInformation"][0]["accessVariables"]["resourceId"])
 
 item["accessObjectVariables"] = {}
-item["accessObjectVariables"]["type"] = "core:Property"
+item["accessObjectVariables"]["type"] = "Property"
 item["accessObjectVariables"]["value"] = {}
 item["accessObjectVariables"]["value"]["ip"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][:-4]
 item["accessObjectVariables"]["value"]["port"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][-3:]

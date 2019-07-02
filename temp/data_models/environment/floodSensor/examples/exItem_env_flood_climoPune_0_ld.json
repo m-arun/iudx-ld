@@ -4,19 +4,19 @@
     ],
     "@id": "akdfi74938nid8kjfvko4",
     "NAME": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "XYZ"
     },
     "STATION_ID": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "FWR015"
     },
     "accessObjectURL": {
         "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/environment/floodSensor/examples/exApiObject_env_flood_climoPune_0.json",
-        "type": "core:Relationship"
+        "type": "Relationship"
     },
     "accessObjectVariables": {
-        "type": "core:Property",
+        "type": "Property",
         "value": {
             "NAME": "XYZ",
             "ip": "https://pune.iudx.org.in",
@@ -25,27 +25,27 @@
         }
     },
     "createdAt": {
-        "type": "core:TimeProperty",
+        "type": "TimeProperty",
         "value": "2019-02-20T10:30:06.093121"
     },
     "itemDescription": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "Flood sensing station"
     },
     "itemStatus": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "active"
     },
     "itemType": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "resourceItem"
     },
     "latestResourceData": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "https://pune.iudx.org.in/api/1.0.0/resource/latest/flood-sensor/XYZ"
     },
     "location": {
-        "type": "core:GeoProperty",
+        "type": "GeoProperty",
         "value": {
             "type": "Point",
             "value": [
@@ -56,26 +56,26 @@
     },
     "provider": {
         "object": "iudx_iri:pscdcl",
-        "type": "core:Relationship"
+        "type": "Relationship"
     },
     "refBaseSchema": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json"
     },
     "refDataModel": {
         "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/environment/floodSensor/examples/exdataModel_env_flood_climoPune_0.json#/dataModelSchema",
-        "type": "core:Relationship"
+        "type": "Relationship"
     },
     "resourceId": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "XYZ"
     },
     "resourceServer": {
         "object": "iudx_iri:pscdcl_server",
-        "type": "core:Relationship"
+        "type": "Relationship"
     },
     "tags": {
-        "type": "core:Property",
+        "type": "Property",
         "value": [
             "flooding",
             "flood",
