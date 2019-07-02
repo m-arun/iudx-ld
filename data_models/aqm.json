@@ -6,15 +6,15 @@
             "uo": "http://units.open.org/",
             "AQI_POLLUTANT": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI_POLLUTANT/",
-                "@type": "core:Property"
+                "@type": "Property"
             },
             "AQI": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/AQI/",
-                "@type": "core:Property"
+                "@type": "Property"
             },
             "productDescription": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json#/properties/productDescription/",
-                "@type": "core:Property"
+                "@type": "Property"
             }
         }
      ],

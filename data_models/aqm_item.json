@@ -8,31 +8,31 @@
     "@id": "iudx_iri:aqm_item_123",
     "itemDescription": "A test item",
     "itemType": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "resourceItem"
     },
     "refDataModel": {
-        "type": "core:Relationship",
+        "type": "Relationship",
         "object": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"
     },
     "tags": {
-        "type": "core:Property",
+        "type": "Property",
         "value": ["air","quality","AQI","pollution"]
     },
     "resourceServer": {
-        "type": "core:Relationship",
+        "type": "Relationship",
         "object": "iudx_iri:pscdcl_server"
     },
     "resourceId": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "aqm_abc_123"
     },
     "provider": {
-        "type": "core:Relationship",
+        "type": "Relationship",
         "object": "iudx_iri:pscdcl"
     },
     "productDescription": {
-        "type": "core:Property",
+        "type": "Property",
         "value": {
             "brand": "iisc",
             "model": "aqm",
@@ -40,36 +40,36 @@
         }
     },
     "AQI_POLLUTANT": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "CO"
     },
     "AQI": {
-        "type": "core:Property",
+        "type": "Property",
         "value": 2
     },
     "deviceModelInfo": {
-        "type": "core:Property",
+        "type": "Property",
         "value": {
             "productID": "BoschClimo"
         }
     },
     "location": {
-        "type": "core:GeoProperty",
+        "type": "GeoProperty",
         "value": {
             "type": "Point",
             "value": [13.8343, 77.3434]
         }
     },
     "accessObjectURL": {
-        "type": "core:Relationship",
+        "type": "Relationship",
         "object": "iudx_iri:aqm_item_123_accessObject"
     },
     "itemStatus": {
-        "type": "core:Property",
+        "type": "Property",
         "value": "active"
     },
     "createdAt": {
-        "type": "core:TimeProperty",
+        "type": "TimeProperty",
         "value": "2018-11-13T20:20:39+00:00"
     }
 }

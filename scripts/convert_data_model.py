@@ -48,7 +48,7 @@ props["deviceModelInfo"] = {"allOf": [{ "$ref":  "https://raw.githubusercontent.
 
 for prop in props:
     if("type" in props[prop]):
-        context[prop] = {"@id":dm_url + prop, "@type": "core:Property"}
+        context[prop] = {"@id":dm_url + prop, "@type": "Property"}
         valueSchema = {}
         valueSchema["type"] = props[prop]["type"]
         if("minimum" in prop):
