@@ -53,7 +53,7 @@ item.pop("id")
 item["refBaseSchema"] = mkProperty(item["refBaseSchema"])
 
 item["provider"] = mkRelationship("iudx_iri:pscdcl")
-item["refDataModel"] = mkProperty(item["refDataModel"])
+item["refDataModel"] = mkRelationship(item["refDataModel"])
 item["itemDescription"] = mkProperty(item["itemDescription"])
 
 t = item["tags"]
@@ -84,6 +84,14 @@ item["accessObjectVariables"]["value"]["port"] = item["accessInformation"][0]["a
 item["accessObjectVariables"]["value"]["resourceClass"] = item["accessInformation"][0]["accessVariables"]["resourceClass"]
 item["accessObjectVariables"]["value"]["NAME"] = item["NAME"]
 item.pop("accessInformation")
+
+if("deviceModelInfo" in item.keys()):
+    brand = item["deviceModelInfo"]["brand"]["name"]
+    name = item["deviceModelInfo"]["brand"]["name"]
+    url = item["deviceModelInfo"]["brand"]["url"]
+    item["deviceModelInfo"] = {}
+    item["deviceModelInfo"] = mkProperty({"brand":brand, "name":name,"url":url})
+
 
 item["@context"] = []
 item["@context"].append(dataModelPath)

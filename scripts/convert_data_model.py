@@ -43,6 +43,8 @@ def makeOneOf(prop):
 
 
 
+props.pop("location")
+props["deviceModelInfo"] = {"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]}
 
 for prop in props:
     if("type" in props[prop]):
