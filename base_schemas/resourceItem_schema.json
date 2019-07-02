@@ -16,7 +16,7 @@
             "allOf": [{"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "type": "object",
             "properties": {
-                "value": {
+                "@value": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -62,7 +62,7 @@
         "itemStatus": {
             "type": "object",
             "properties": {
-                "value": {
+                "@value": {
                     "type": "string",
                     "enum": ["active", "deprecated"]
                 }

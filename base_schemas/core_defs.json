@@ -14,7 +14,7 @@
                             "type": "string",
                             "enum": ["core:Property"]
                         },
-                        "value": {
+                        "@value": {
                             "type": [
                                 "string",
                                 "number",
@@ -35,8 +35,8 @@
                         }
                     },
                     "required": [
-                        "type",
-                        "value"
+                        "@type",
+                        "@value"
                     ]
                 },
                 {
@@ -51,11 +51,11 @@
         "TimeProperty": {
             "type": "object",
             "properties": {
-                "type": {
+                "@type": {
                     "type": "string",
                     "enum": ["core:TimeProperty"]
                 },
-                "value": {
+                "@value": {
                     "type":  "string"
                 }
             }
@@ -67,7 +67,7 @@
                     "type": "string",
                     "enum": ["core:Relationship"]
                 },
-                "object": {
+                "@object": {
                     "type": "string",
                     "format": "uri"
                 },
@@ -82,8 +82,8 @@
                 }
             },
             "required": [
-                "type",
-                "object"
+                "@type",
+                "@object"
             ],
             "additionalProperties": {
                 "anyOf": [
@@ -103,7 +103,7 @@
                     "type": "string",
                     "enum": ["core:GeoProperty"]
                 },
-                "value": {
+                "@value": {
                     "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
                 },
                 "observedAt": {
@@ -117,8 +117,8 @@
                 }
             },
             "required": [
-                "type",
-                "value"
+                "@type",
+                "@value"
             ]
         }
     }
