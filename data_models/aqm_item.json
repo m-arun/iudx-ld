@@ -7,6 +7,10 @@
     ],
     "@id": "iudx_iri:aqm_item_123",
     "itemDescription": "A test item",
+    "itemType": {
+        "type": "Property",
+        "value": "resourceItem"
+    },
     "refDataModel": {
         "type": "Relationship",
         "object": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/aqm.json"

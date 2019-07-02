@@ -13,6 +13,7 @@
         },
         "tags": {
             "describes": "Array of keywords describing this item",
+            "allOf": [{"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property"}],
             "type": "object",
             "properties": {
                 "type": {

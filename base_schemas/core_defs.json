@@ -56,8 +56,7 @@
                     "enum": ["TimeProperty"]
                 },
                 "value": {
-                    "type":  "string",
-                    "format": "date-time"
+                    "type":  "string"
                 }
             }
         },
