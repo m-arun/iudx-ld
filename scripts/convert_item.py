@@ -20,28 +20,28 @@ with open(resourceItemSchemaPath,"r") as f:
 
 def mkProperty(prop):
     temp = {}
-    temp["type"] = "core:Property" 
-    temp["value"] = prop
+    temp["@type"] = "core:Property" 
+    temp["@value"] = prop
     return temp
 
 def mkRelationship(rel):
     temp = {}
-    temp["type"] = "core:Relationship" 
-    temp["object"] = rel
+    temp["@type"] = "core:Relationship" 
+    temp["@object"] = rel
     return temp
 
 def mkTimeProperty(prop):
     temp = {}
-    temp["type"] = "core:TimeProperty" 
-    temp["value"] = prop
+    temp["@type"] = "core:TimeProperty" 
+    temp["@value"] = prop
     return temp
 
 def mkLocation(prop):
     temp = {}
-    temp["type"] = "core:GeoProperty"
-    temp["value"] = {}
-    temp["value"]["type"] = "Point"
-    temp["value"]["value"] = [prop["latitude"], prop["longitude"]]
+    temp["@type"] = "core:GeoProperty"
+    temp["@value"] = {}
+    temp["@value"]["@type"] = "Point"
+    temp["@value"]["@value"] = [prop["latitude"], prop["longitude"]]
     return temp
 
 
@@ -77,12 +77,12 @@ item["resourceId"] = {}
 item["resourceId"] = mkProperty(item["accessInformation"][0]["accessVariables"]["resourceId"])
 
 item["accessObjectVariables"] = {}
-item["accessObjectVariables"]["type"] = "core:Property"
-item["accessObjectVariables"]["value"] = {}
-item["accessObjectVariables"]["value"]["ip"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][:-4]
-item["accessObjectVariables"]["value"]["port"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][-3:]
-item["accessObjectVariables"]["value"]["resourceClass"] = item["accessInformation"][0]["accessVariables"]["resourceClass"]
-item["accessObjectVariables"]["value"]["NAME"] = item["NAME"]
+item["accessObjectVariables"]["@type"] = "core:Property"
+item["accessObjectVariables"]["@value"] = {}
+item["accessObjectVariables"]["@value"]["ip"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][:-4]
+item["accessObjectVariables"]["@value"]["port"] = item["accessInformation"][0]["accessVariables"]["resourceServerId"][-3:]
+item["accessObjectVariables"]["@value"]["resourceClass"] = item["accessInformation"][0]["accessVariables"]["resourceClass"]
+item["accessObjectVariables"]["@value"]["NAME"] = item["NAME"]
 item.pop("accessInformation")
 
 if("deviceModelInfo" in item.keys()):
