@@ -1,9 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "@context": [
-        [
-            "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_context.json"
-        ],
+        "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_context.json",
         {
             "ALERT": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/env_flood_climoPune_0.json/properties/ALERT",

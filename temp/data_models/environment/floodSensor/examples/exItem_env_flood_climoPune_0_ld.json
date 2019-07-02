@@ -47,8 +47,8 @@
     "location": {
         "@type": "core:GeoProperty",
         "@value": {
-            "@type": "Point",
-            "@value": [
+            "type": "Point",
+            "value": [
                 18.581797,
                 73.8727111
             ]

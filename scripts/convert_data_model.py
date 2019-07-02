@@ -12,7 +12,7 @@ path_to_dm_folder = "".join(a+"/" for a in dm_list[:-1])
 folder_path = "".join(a+"/" for a in path_to_dm)
 
 
-core_context = "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_context.json",
+core_context = "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_context.json"
 dm_url = "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/" + folder_path + dm_name + "/properties/"
 
 dm = {}
@@ -74,8 +74,7 @@ dm["@context"].append(core_context)
 dm["@context"].append({})
 dm["@context"][1] = context
 
-
-print(path_to_dm_folder + dm_name[:-4] + "ld.json")
+print(path_to_dm_folder + dm_name[:-5] + "ld.json")
 with open(path_to_dm_folder + dm_name[:-5] + "_ld.json", "w") as f:
     json.dump(dm, f, indent=4, sort_keys=True)
 
