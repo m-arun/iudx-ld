@@ -25,6 +25,12 @@
         "productDescription": {
             "allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]
         },
+        "latitude": {
+            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/GeoProperty"}]
+        },
+        "longitude": {
+            "allOf": [ {"$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/GeoProperty"}]
+        },
         "AQI": {
             "describes": "Overall AQI ",
             "units": "dimensionless",

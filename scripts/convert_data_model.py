@@ -43,7 +43,7 @@ def makeOneOf(prop):
     return tmpl
 
 def mkTimeProp(prop):
-    return prop.update({"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"}]})
+    return {"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"}]}
 
 
 
@@ -51,10 +51,9 @@ props.pop("location")
 props["deviceModelInfo"] = {"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]}
 
 for prop in props:
-    if(re.search('mandy', 'Mandy Pande', re.IGNORECASE)):
-        pass
-
-
+    if(re.search('time', prop, re.IGNORECASE)):
+        props[prop] = mkTimeProp(prop)
+        context[prop] = {"@id":dm_url + prop, "@type": "TimeProperty"}
     if("type" in props[prop]):
         context[prop] = {"@id":dm_url + prop, "@type": "Property"}
         valueSchema = {}
@@ -82,7 +81,7 @@ dm["@context"].append(core_context)
 dm["@context"].append({})
 dm["@context"][1] = context
 
-print(path_to_dm_folder + dm_name[:-5] + "ld.json")
+print(path_to_dm_folder + dm_name[:-5] + "_ld.json")
 with open(path_to_dm_folder + dm_name[:-5] + "_ld.json", "w") as f:
     json.dump(dm, f, indent=4, sort_keys=True)
 
