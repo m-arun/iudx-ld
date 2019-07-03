@@ -10,6 +10,11 @@ path_to_item = "".join(a+"/" for a in itemNameList[:itemNameList.index("examples
 
 resourceItemSchemaPath = "../base_schemas/resourceItem_schema.json"
 
+
+
+
+refBaseSchema = "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/resourceItem_schema.json"
+
 item = {}
 with open(itemPath,"r") as f:
     item = json.load(f)
@@ -50,7 +55,7 @@ item.pop("refBaseSchemaRelease")
 item["@id"] = item["id"]
 item.pop("id")
 
-item["refBaseSchema"] = mkRelationship(item["refBaseSchema"])
+item["refBaseSchema"] = mkRelationship(refBaseSchema)
 
 item["provider"] = mkRelationship("iudx_iri:pscdcl")
 item["refDataModel"] = mkRelationship(item["refDataModel"])

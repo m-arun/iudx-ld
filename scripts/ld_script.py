@@ -49,14 +49,12 @@ def main():
     print("\n\n")
 
 
-    print("Input length\t" + str(numItems))
-    print("Expanded length\t" + str(len(expanded[0])-1))
-    inpPropNames = list(item.keys())
-    expPropNames = [k.split("/")[-1] for k in expanded[0].keys()]
-    print(type(inpPropNames))
-    print(type(expPropNames))
-    missing = list( set(inpPropNames) - set(expPropNames) )
-    print(missing)
+    inpPropNames = set(item.keys())- set(["@context", "latestResourceData"])
+    expPropNames = set([k.split("/")[-1] for k in expanded[0].keys()])
+    compPropNames = set([k.split(":")[-1] for k in compacted.keys()])
+
+    print("Missing from expanded" + str(inpPropNames-expPropNames))
+    print("Missing from compacted" + str(inpPropNames-compPropNames))
 
 
 

@@ -59,7 +59,7 @@
         "type": "Relationship"
     },
     "refBaseSchema": {
-        "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json",
+        "object": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/resourceItem_schema.json",
         "type": "Relationship"
     },
     "refDataModel": {

@@ -36,6 +36,10 @@
             "@id": "iudx_resourceItem:tags",
             "@type": "core:Property"
         },
+        "itemType": {
+            "@id": "iudx_resourceItem:itemType",
+            "@type": "core:Property"
+        },
         "itemDescription": {
             "@id": "iudx_resourceItem:itemDescription",
             "@type": "core:Property"
