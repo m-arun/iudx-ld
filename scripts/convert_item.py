@@ -50,7 +50,7 @@ item.pop("refBaseSchemaRelease")
 item["@id"] = item["id"]
 item.pop("id")
 
-item["refBaseSchema"] = mkProperty(item["refBaseSchema"])
+item["refBaseSchema"] = mkRelationship(item["refBaseSchema"])
 
 item["provider"] = mkRelationship("iudx_iri:pscdcl")
 item["refDataModel"] = mkRelationship(item["refDataModel"])

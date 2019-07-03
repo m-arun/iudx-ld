@@ -2,6 +2,7 @@ import json
 import os
 from os import listdir
 from os.path import isfile, join
+import re
 
 
 data_model = "../temp/data_models/environment/floodSensor/env_flood_climoPune_0.json"
@@ -40,6 +41,9 @@ def makeOneOf(prop):
     tmpl["oneOf"][1]["type"] = props[prop]["type"]
     tmpl["oneOf"][1]["$ref"] = "#/properties/"+prop+"/valueSchema"
     return tmpl
+
+def mkTimeProp(prop):
+    return prop.update({"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/TimeProperty"}]})
 
 
 

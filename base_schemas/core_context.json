@@ -40,6 +40,10 @@
             "@id": "iudx_resourceItem:itemDescription",
             "@type": "core:Property"
         },
+        "refBaseSchema": {
+            "@id": "iudx_resourceItem:refBaseSchema",
+            "@type": "core:Relationship"
+        },
         "refDataModel": {
             "@id": "iudx_resourceItem:refDataModel",
             "@type": "core:Relationship"

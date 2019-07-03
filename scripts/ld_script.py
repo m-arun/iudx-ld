@@ -21,6 +21,7 @@ def main():
     itemFile = sys.argv[1]
     with open(itemFile, "r") as f:
         item = json.load(f)
+    numItems = len(item.keys())-2 # -2 for context and id
     context = {}
     ctxtResolver(item["@context"], context)
     doc = {k:v for k,v in item.items() if k not in "@context"}
@@ -46,6 +47,17 @@ def main():
     print("Normalized")
     print(json.dumps(normalized, indent=2))
     print("\n\n")
+
+
+    print("Input length\t" + str(numItems))
+    print("Expanded length\t" + str(len(expanded[0])-1))
+    inpPropNames = list(item.keys())
+    expPropNames = [k.split("/")[-1] for k in expanded[0].keys()]
+    print(type(inpPropNames))
+    print(type(expPropNames))
+    missing = list( set(inpPropNames) - set(expPropNames) )
+    print(missing)
+
 
 
 

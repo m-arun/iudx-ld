@@ -25,7 +25,7 @@
             }
         },
         "refBaseSchema": {
-            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Property",
+            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/core_defs.json#/definitions/Relationship",
             "describes": "Base schema for this item"
         },
         "resourceServer": {

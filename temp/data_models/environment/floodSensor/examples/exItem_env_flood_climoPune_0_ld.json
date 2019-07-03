@@ -59,8 +59,8 @@
         "type": "Relationship"
     },
     "refBaseSchema": {
-        "type": "Property",
-        "value": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json"
+        "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/base_schemas/v0.0.0/iudx_data_item_schema.json",
+        "type": "Relationship"
     },
     "refDataModel": {
         "object": "https://raw.githubusercontent.com/rbccps-iisc/iudx-schemas/master/data_models/environment/floodSensor/examples/exdataModel_env_flood_climoPune_0.json#/dataModelSchema",
