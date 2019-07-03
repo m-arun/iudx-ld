@@ -80,6 +80,7 @@ dm["@context"] = []
 dm["@context"].append(core_context)
 dm["@context"].append({})
 dm["@context"][1] = context
+dm.pop("required")
 
 print(path_to_dm_folder + dm_name[:-5] + "_ld.json")
 with open(path_to_dm_folder + dm_name[:-5] + "_ld.json", "w") as f:

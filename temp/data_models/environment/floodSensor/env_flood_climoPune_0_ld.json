@@ -15,6 +15,10 @@
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/env_flood_climoPune_0.json/properties/DANGER",
                 "@type": "Property"
             },
+            "LASTUPDATEDATETIME": {
+                "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/env_flood_climoPune_0.json/properties/LASTUPDATEDATETIME",
+                "@type": "TimeProperty"
+            },
             "M_DISTANCE": {
                 "@id": "https://raw.githubusercontent.com/rraks/iudx-ld/master/data_models/env_flood_climoPune_0.json/properties/M_DISTANCE",
                 "@type": "Property"
@@ -294,10 +298,5 @@
             ]
         }
     },
-    "required": [
-        "STATION_ID",
-        "NAME",
-        "location"
-    ],
     "type": "object"
 }
