@@ -58,7 +58,7 @@ item.pop("id")
 item["refBaseSchema"] = mkRelationship(refBaseSchema)
 
 item["provider"] = mkRelationship("iudx_iri:pscdcl")
-item["refDataModel"] = mkRelationship(item["refDataModel"])
+item["refDataModel"] = mkRelationship(dataModelPath)
 item["itemDescription"] = mkProperty(item["itemDescription"])
 
 t = item["tags"]

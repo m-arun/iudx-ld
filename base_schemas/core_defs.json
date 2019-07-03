@@ -97,28 +97,36 @@
             }
         },
         "GeoProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": ["GeoProperty"]
+            "oneOf": [
+                {
+
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["GeoProperty"]
+                        },
+                        "value": {
+                            "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
+                        },
+                        "observedAt": {
+                            "$ref": "#/definitions/TimeProperty"
+                        },
+                        "createdAt": {
+                            "$ref": "#/definitions/TimeProperty"
+                        },
+                        "modifiedAt": {
+                            "$ref": "#/definitions/TimeProperty"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
                 },
-                "value": {
-                    "$ref": "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/geometry-schema.json#"
-                },
-                "observedAt": {
-                    "$ref": "#/definitions/TimeProperty"
-                },
-                "createdAt": {
-                    "$ref": "#/definitions/TimeProperty"
-                },
-                "modifiedAt": {
-                    "$ref": "#/definitions/TimeProperty"
+                {
+                    "type": ["string","number"]
                 }
-            },
-            "required": [
-                "type",
-                "value"
             ]
         }
     }

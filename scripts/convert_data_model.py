@@ -51,6 +51,10 @@ props.pop("location")
 props["deviceModelInfo"] = {"allOf": [{ "$ref":  "https://raw.githubusercontent.com/rraks/iudx-ld/master/base_schemas/miscSchemaOrgDefs.json#/definitions/product"}]}
 
 for prop in props:
+    if(re.search('mandy', 'Mandy Pande', re.IGNORECASE)):
+        pass
+
+
     if("type" in props[prop]):
         context[prop] = {"@id":dm_url + prop, "@type": "Property"}
         valueSchema = {}
